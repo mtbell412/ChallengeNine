@@ -1,56 +1,128 @@
 # ChallengeNine
 readme generator
 
+# 09 Node.js Challenge: Professional README Generator
+
+## Your Task
+
+When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions&mdash;this last part increases the likelihood that other developers will contribute to the success of the project. 
+
+You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.
+
+Your task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer/v/8.2.4). Review the [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide) as a reminder of everything that a high-quality, professional README should contain. 
+
+The application will be invoked by using the following command:
+
+```bash
+node index.js
+```
+
+Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality. Revisit the Screencastify Tutorial in the prework as a refresher on how to record video from your computer. You’ll need to submit a link to the video _and_ add it to the README of your project.
 
 
-# Full-Stack Course Overview
+## User Story
 
-Welcome to the Full-Stack Boot Camp! Some of the most important factors that influence how well and how quickly you learn something are not only how you structure and sequence your learning, but also how you stay motivated and curious about the material, and how you leverage your prior knowledge to build new knowledge you can apply in different situations. 
+```md
+AS A developer
+I WANT a README generator
+SO THAT I can quickly create a professional README for a new project
+```
 
-Learning how to become a web developer is not easy. It will take a lot of internal drive and outside support. To make that journey a bit easier, the course curriculum is structured and sequenced to keep motivation high and connections between concepts clear. 
+## Acceptance Criteria
 
-The course is broken down into three phases, with a group project at the end of each. Let's delve into what each phase covers and what you'll create during the project weeks. 
+```md
+GIVEN a command-line application that accepts user input
+WHEN I am prompted for information about my application repository
+THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+WHEN I enter my project title
+THEN this is displayed as the title of the README
+WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+WHEN I choose a license for my application from a list of options
+THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+WHEN I enter my GitHub username
+THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
+WHEN I enter my email address
+THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+WHEN I click on the links in the Table of Contents
+THEN I am taken to the corresponding section of the README
+```
 
-## What to Expect in Phase 1 
+## Getting Started
 
-The first third of the course focuses on the front end&mdash;the words, images, and forms you see and interact with in the browser&mdash;like when you click a login button and a dialog box pops up. Front-end languages, techniques, and libraries are foundational to being a full-stack developer, and you’ll continue to build on these skills throughout the course.
+Here are some guidelines to help you get started:
 
-## Project 1
+* Create a `.gitignore` file and include `node_modules/` and `.DS_Store/` so that your `node_modules` directory isn't tracked or uploaded to GitHub. Be sure to create your `.gitignore` file before installing any npm dependencies.
 
-This boot camp will be taxing, and having something you can look back on and be proud of early in the course helps keep motivation and morale high. You might not believe it now, but it’s totally possible to build a cool interactive web application after the first few weeks by developing the front-end yourself and leveraging other people’s servers and APIs. For example, Food Finder is a student-made app that helps you find recipes. Fourth and Lawn is another student-made app that helps you find parking at sporting events.
+* Make sure that your repo includes a `package.json` with the required dependencies. You can create one by running `npm init` when you first set up the project, before installing any dependencies.
 
-## What to Expect in Phase 2 
+* Include a video of the typical user flow through your application. This includes views of the prompts and the responses after their selection.
 
-You could stop here and look for jobs as a front-end web developer, but the field demands more. There are a plethora of opportunities for developers who can build their own back end. In the second phase, you will learn to build your own server code. 
+* Refer to the [Fullstack Blog Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) for additional guidance on creating a video.
 
-As mentioned earlier, the second factor influencing how strong and quickly you learn something new is how you are able to take what you already know and make helpful connections with new material in order to develop a solid understanding of new concepts. Having a back end allows us to use a server to make and receive requests from the front end. An example of this is if a user clicks a login button, fills out their user information in the dialog box, and clicks submit, those credentials could be validated via a back-end server.
+* Include any other screenshots you deem necessary to help someone who has never been introduced to your application understand the purpose and function of it. This is how you will communicate to potential employers or other developers in the future what you built and why, and to show how it works.
 
-## Project 2
+## Grading Requirements
 
-As a final project for the second phase, you'll combine your ability to create a front-end website with your new ability to write server code to create a site that interacts with your server code. Starting your second project from scratch instead of using the front end you developed in Project 1 helps reinforce your existing front-end abilities and solidify how you conceive of the front-end and back-end dynamic. If your front-end fundamentals are not strong at the end of the first project, you'll be building on a weak foundation. 
+> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
+>
+> * A repository that has no code
+>
+> * A repository that includes a unique name but nothing else
+>
+> * A repository that includes only a README file but nothing else
+>
+> * A repository that only includes starter code
 
-## What to Expect in Phase 3 
+This Challenge is graded based on the following criteria: 
 
-The third phase primarily focuses on React and computer science fundamentals. React is a popular front-end advanced library that has taken off over the last few years. Why do we go back to the front-end at the very end? Well, unlike JQuery, React brings a certain level of abstraction that is harder to grasp without a working understanding of the back end. React will allow for us to create highly reusable components. Instead of having to create the same element multiple times, React allows us to create it once, and render it as many times as necessary for our application. We can even dynamically render these components to populate information as needed, and not take up more memory than necessary.
+### Deliverables: 20%
 
-We’ll also cover computer science fundamentals, which are essential to web development. Our curriculum includes a deep dive into the basics of coding and algorithms. While this content is no replacement for a computer science degree, you will learn what you need to know to work efficiently and create optimized code. Practices such as sorting algorithms and Big O notation are very important to code efficiency, and will be something you think about when writing applications throughout your career.
+* A sample README generated using the application must be submitted.
 
-## Project 3
+* Your GitHub repository containing your application code.
 
-As a capstone to the boot camp, you’ll work in groups to build novel full-stack applications that solve real-world problems and use a wide swath of the languages and libraries you learned over the course of these past few months. We can’t wait to see what you build!
+### Walkthrough Video: 27%
 
-## Up Next
+* A walkthrough video that demonstrates the functionality of the README generator must be submitted, and a link to the video should be included in your README file.
 
-For a closer preview of what we explore in each unit of the boot camp, dive into each unit’s overview to learn the following:
+* The walkthrough video must demonstrate how a user would invoke the application from the command line.
 
-* What you will learn in the unit and why it’s important
+* The walkthrough video must demonstrate how a user would enter responses to all of the prompts in the application.
 
-* How topics in the unit relate to what came earlier in the boot camp
+* The walkthrough video must demonstrate a generated README that matches the user input and has a functioning table of contents.
 
-* Activities you’ll complete and what skills they focus on
+### Technical Acceptance Criteria: 40%
 
-* Common interview questions related to that week’s material
+* Satisfies all of the above acceptance criteria plus the following:
 
-* Helpful resources if you want to get ahead or gain more experience after the unit
+	* Uses the [Inquirer package](https://www.npmjs.com/package/inquirer/v/8.2.4).
+
+### Repository Quality: 13%
+
+* Repository has a unique name.
+
+* Repository follows best practices for file structure and naming conventions.
+
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+
+* Repository contains multiple descriptive commit messages.
+
+* Repository contains a high-quality README with description and a link to walkthrough video.
+
+
+## Review
+
+You are required to submit the following for review:
+
+* A walkthrough video demonstrating the functionality of the application.
+
+* A sample README.md file for a project repository generated using your application
+
+* The URL of the GitHub repository, with a unique name and a README describing the project
+
+---
 
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+
